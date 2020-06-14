@@ -3,20 +3,28 @@
 
 # include <stdlib.h>
 # include <stdarg.h>
+# include <stdio.h>
 
-typedef struct    s_formatter
+typedef struct    s_format
 {
-    va_list        *ap;
-    char        *str;
-    size_t        c;
+    //parameters
+    va_list        *params;
+    //format
+    char        *format;
+    char        *out;
+    size_t        amount_params;
     char        flags[6];
     char        *color;
     size_t        width;
     int            precision;
     char        length[3];
-    char        specifier;
+    char        type;
     int            baks;
-}                t_form;
+}                t_format;
+
+//igor
+t_format parser(char* format, va_list *params);
+//dima
 
 int ft_printf(const char *format, ...);
 

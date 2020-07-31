@@ -26,14 +26,8 @@
     //  Management of alter tools for colors, fd or other fun stuff like that :)
 
 //%[parameter][flags][width][.precision][length]type
-typedef     struct  s_format
+typedef     struct  s_arg
 {
-    va_list         argc;
-    // intmax_t        number;
-    // uintmax_t       number_x;
-    char            *format;
-    int             i_symbol;
-
     //flags
     short           f_plus;
     short           f_minus;
@@ -49,9 +43,23 @@ typedef     struct  s_format
     short           ll;
     short           h;
     short           hh;
+}                   t_arg;
 
-} t_format;
+typedef     struct  s_format
+{
+    va_list         argc;
+    // intmax_t        number;
+    // uintmax_t       number_x;
+    char            *format;
+    int             i_symbol;
+    t_arg           current_arg;
+}                   t_format;
+
 
 int     ft_printf(const char *format, ...);
+void	init_format(t_format *formater);
+void	display_arg(t_format *formater);
+void	parse_arg(t_format *formater);
+int		is_type(char sym);
 
 #endif

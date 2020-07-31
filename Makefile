@@ -1,6 +1,6 @@
 NAME = ft_printf
 SRCS = ./src/*.c
-OBJS = ft_printf.o main.o
+OBJS = ft_printf.o main.o init_format.o display_arg.o parse_arg.o
 SRCS_FOLDER=./src/
 INCLUDES = ./includes/
 FLAGS = -Wall -Wextra -Werror

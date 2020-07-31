@@ -1,16 +1,24 @@
 NAME = ft_printf
 SRCS = ./src/*.c
-OBJS = ft_printf.o
-SRCS_FOLDER=./src/.
-INCLUDES = ./includes/.
+OBJS = ft_printf.o main.o
+SRCS_FOLDER=./src/
+INCLUDES = ./includes/
 FLAGS = -Wall -Wextra -Werror
 LIBFT = ./libft/
+OBJ_DIR = obj/
+
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+O_FILES = $(SRCS:%.c=%.o)
+
+$(NAME): $(OBJ_DIR) $(OBJS)
 			gcc $(FLAGS) -c $(SRCS) -I $(INCLUDES)
-			gcc $(FLAGS) $(OBJS) -o $(NAME)
+			gcc $(FLAGS) $(OBJS) -o $(NAME) -L. libft/libft.a
+
+$(OBJ_DIR):
+			mkdir -p $(OBJ_DIR)
+
 
 
 %.o: $(SRCS_FOLDER)%.c
@@ -18,12 +26,16 @@ $(NAME): $(OBJS)
 
 clean:
 		rm -f $(OBJS)
-		make -C $(LIBFT) clean
+
 
 fclean: clean
 		rm -f $(NAME)
-		make -C $(LIBFT) fclean
 
 re: fclean all
 
 .PHONY: all clean fclean re
+"editor.tabSize": 4,
+"editor.insertSpaces": false,
+"editor.renderWhitespace": "all",
+"files.trimTrailingWhitespace": true,
+"files.insertFinalNewline": true,

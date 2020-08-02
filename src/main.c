@@ -1,8 +1,15 @@
 #include "../includes/ft_printf.h"
-
+#include <stdint.h>
 
 int main(void) {
-	ft_printf("hello, world\n  %+10.12ls   %#20.5hhd");
-	// printf("%+#10o\n", 123);
+	long long int test = 9223372036854775807;
+	// ft_printf("%.2d\n", test + 1);
+	// printf("%05.4d\n", 123);
+	printf("%d\n", length_of_number(123));
+	printf("%d\n", length_of_number(0));
+	printf("%d\n", length_of_number(3));
+	printf("%d\n", length_of_number(-123124));
+	printf("FOR: %lld	", test + 1);
+	printf("%d\n", length_of_number(test + 1));
 	return (0);
 }

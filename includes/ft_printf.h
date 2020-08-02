@@ -26,23 +26,41 @@
     //  Management of alter tools for colors, fd or other fun stuff like that :)
 
 //%[parameter][flags][width][.precision][length]type
+
+# define C_TYPE 1
+# define S_TYPE 2
+# define P_TYPE 3
+# define D_TYPE 4
+# define I_TYPE 5
+# define O_TYPE 6
+# define U_TYPE 7
+# define X_JR_TYPE 8
+# define X_TYPE 9
+# define F_TYPE 10
+
+# define PLUS_FLAG 1
+# define MINUS_FLAG 2
+# define SPACE_FLAG 4
+# define HASH_FLAG 8
+# define ZERO_FLAG 16
+
+# define L_JR_LENGTH 1
+# define L_LENGTH 2
+# define LL_LENGTH 3
+# define H_LENGTH 4
+# define HH_LENGTH 5
+
 typedef     struct  s_arg
 {
     //flags
-    short           f_plus;
-    short           f_minus;
-    short           f_space;
-    short           f_hash;
-    short           f_zero;
+    short           flag;
+    short           type;
     //width
     int             width;
     //precision
     int             precision;
     //length
-    short           l;
-    short           ll;
-    short           h;
-    short           hh;
+    short           length;
 }                   t_arg;
 
 typedef     struct  s_format
@@ -52,7 +70,7 @@ typedef     struct  s_format
     // uintmax_t       number_x;
     char            *format;
     int             i_symbol;
-    t_arg           current_arg;
+    t_arg           *current_arg;
 }                   t_format;
 
 
@@ -61,5 +79,7 @@ void	init_format(t_format *formater);
 void	display_arg(t_format *formater);
 void	parse_arg(t_format *formater);
 int		is_type(char sym);
+void	set_width(t_format *formater);
+void	set_flag(t_format *formater);
 
 #endif

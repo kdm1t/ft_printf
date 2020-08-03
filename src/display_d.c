@@ -5,6 +5,10 @@ void	display_d(t_format *formater)
 	intmax_t num;
 
 	num = get_d(formater);
+	if ((formater->current_arg->flag & PLUS_FLAG) == PLUS_FLAG)
+	{
+		ft_putchar('+');
+	}
 	display_d_precision(formater, num);
 	display_d_1(num);
 

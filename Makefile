@@ -1,5 +1,13 @@
 NAME = ft_printf
-SRCS = ./src/*.c
+SRCS = \
+	$(SRCS_FOLDER)main.c \
+	$(SRCS_FOLDER)ft_printf.c \
+	$(SRCS_FOLDER)init_format.c \
+	$(SRCS_FOLDER)display_arg.c \
+	$(SRCS_FOLDER)parse_arg.c \
+	$(SRCS_FOLDER)display_d.c \
+	$(SRCS_FOLDER)display_d_precision.c \
+	$(SRCS_FOLDER)length_of_number.c
 OBJS = \
 	main.o \
 	ft_printf.o \

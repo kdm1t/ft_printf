@@ -1,6 +1,31 @@
 NAME = ft_printf
-SRCS = ./src/*.c
-OBJS = ft_printf.o main.o init_format.o display_arg.o parse_arg.o
+SRCS = \
+	$(SRCS_FOLDER)main.c \
+	$(SRCS_FOLDER)ft_printf.c \
+	$(SRCS_FOLDER)init_format.c \
+	$(SRCS_FOLDER)display_arg.c \
+	$(SRCS_FOLDER)parse_arg.c \
+	$(SRCS_FOLDER)display_d.c \
+	$(SRCS_FOLDER)display_d_precision.c \
+	$(SRCS_FOLDER)length_of_number.c \
+	$(SRCS_FOLDER)display_d_width.c \
+	$(SRCS_FOLDER)display_c.c \
+	$(SRCS_FOLDER)display_s.c \
+	$(SRCS_FOLDER)display_p.c
+
+OBJS = \
+	main.o \
+	ft_printf.o \
+	init_format.o \
+	display_arg.o \
+	parse_arg.o \
+	display_d.o \
+	display_d_precision.o \
+	length_of_number.o \
+	display_d_width.o \
+	display_c.o \
+	display_s.o \
+	display_p.o
 SRCS_FOLDER=./src/
 INCLUDES = ./includes/
 FLAGS = -Wall -Wextra -Werror

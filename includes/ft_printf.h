@@ -5,7 +5,10 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
-#include <locale.h>
+#include <unistd.h>
+#include <stdint.h>
+#include <limits.h>
+
 
 
 //mandatory part:
@@ -80,5 +83,18 @@ void	parse_arg(t_format *formater);
 int		is_type(char sym);
 void	set_width(t_format *formater);
 void	set_flag(t_format *formater);
+
+long long int	get_d(t_format *formater);
+void	display_d(t_format *formater);
+void	display_d_1(long long int n);
+void	display_d_2(long long int n);
+void	display_d_precision(t_format *formater, long long int n);
+int		length_of_number(long long int n);
+int		length_of_number_2(long long int n);
+void	display_d_width(t_format *formater, long long int num);
+void	display_c(t_format *formater);
+void	display_c_width(t_format *formater);
+void	display_s(t_format *formater);
+void	display_p(t_format *formater);
 
 #endif

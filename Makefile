@@ -27,7 +27,8 @@ OBJS = \
 	display_c.o \
 	display_s.o \
 	display_p.o \
-	converter.o
+	converter.o 
+
 SRCS_FOLDER=./src/
 INCLUDES = ./includes/
 FLAGS = -Wall -Wextra -Werror

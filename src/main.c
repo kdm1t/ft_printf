@@ -71,13 +71,13 @@ int main(void) {
 	// printf("%lf\n", 3.4E+38 + 2123.5);
 	// printf("%hhx %hX", 123, 123);
 
-	char *ptr = "Hello, world!";
-	ft_printf("Hello, world! = %-23pEND\n", ptr);
-	printf("Hello, world! = %p\n", ptr);
-	int *ptr2 = (int*)malloc(sizeof(int));
-	*ptr2 = 252;
-	ft_printf("252 = %p\n", ptr2);
-	printf("252 = %-23pEND\n", ptr2);
+	//char *ptr = "Hello, world!";
+	//ft_printf("Hello, world! = %23p\n", ptr);
+	//printf("Hello, world! = %23p\n", ptr);
+	//int *ptr2 = (int*)malloc(sizeof(int));
+	//*ptr2 = 252;
+	//ft_printf("252 = %-3pEND\n", ptr2);
+	printf("%.100f\n", 124.45);
 
 	return (0);
 }

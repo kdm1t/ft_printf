@@ -21,7 +21,7 @@ void	display_arg(t_format *formater)
 		display_c(formater);
 	else if (formater->current_arg->type == S_TYPE)
 		display_s(formater);
-	//else if (formater->current_arg->type == P_TYPE)
-	//	display_p(formater);
+	else if (formater->current_arg->type == P_TYPE)
+		display_p(formater);
 }
 

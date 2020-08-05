@@ -52,6 +52,9 @@
 # define H_LENGTH 4
 # define HH_LENGTH 5
 
+# define TRUE 1
+# define FALSE 0
+
 typedef     struct  s_arg
 {
     //flags
@@ -96,5 +99,8 @@ void	display_c(t_format *formater);
 void	display_c_width(t_format *formater);
 void	display_s(t_format *formater);
 void	display_p(t_format *formater);
+int		size_of_number(unsigned long long int number, unsigned int base);
+char	*convert_to_base(unsigned long long int number, unsigned int base);
+char	*convert_to_hexadecimal(unsigned long long int number, int isUpperCase);
 
 #endif

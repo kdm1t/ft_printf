@@ -76,7 +76,7 @@ typedef     struct  s_format
 }                   t_format;
 
 
-int     ft_printf(const char *format, ...);
+int		ft_printf(const char *format, ...);
 void	init_format(t_format *formater);
 void	display_arg(t_format *formater);
 void	parse_arg(t_format *formater);

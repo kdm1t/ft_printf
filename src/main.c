@@ -1,5 +1,6 @@
 #include "../includes/ft_printf.h"
 #include <stdint.h>
+#include <values.h>
 
 int main(void) {
 	//ptr = &(*str);
@@ -17,53 +18,66 @@ int main(void) {
 	//printf("a\n");
 	// printf("%d", 21);
 	//printf("a\n");
-	unsigned long long int test = ULLONG_MAX;
-	printf("Для шестнадцатеричной:\n");
-	printf("0 = %s\n", convert_to_hexadecimal(0, FALSE));
-	printf("1 = %s\n", convert_to_hexadecimal(1, FALSE));
-	printf("525 = %s\n", convert_to_hexadecimal(525, FALSE));
-	printf("10 = %s\n", convert_to_hexadecimal(10, FALSE));
-	printf("18446744073709551615 = %s\n", convert_to_hexadecimal(test, FALSE));
+	// unsigned long long int test = ULLONG_MAX;
+	// printf("Для шестнадцатеричной:\n");
+	// printf("0 = %s\n", convert_to_hexadecimal(0, FALSE));
+	// printf("1 = %s\n", convert_to_hexadecimal(1, FALSE));
+	// printf("525 = %s\n", convert_to_hexadecimal(525, FALSE));
+	// printf("10 = %s\n", convert_to_hexadecimal(10, FALSE));
+	// printf("18446744073709551615 = %s\n", convert_to_hexadecimal(test, FALSE));
 
-	printf("0 = %s\n", convert_to_hexadecimal(0, TRUE));
-	printf("1 = %s\n", convert_to_hexadecimal(1, TRUE));
-	printf("525 = %s\n", convert_to_hexadecimal(525, TRUE));
-	printf("10 = %s\n", convert_to_hexadecimal(10, TRUE));
-	printf("18446744073709551615 = %s\n", convert_to_hexadecimal(test, TRUE));
+	// printf("0 = %s\n", convert_to_hexadecimal(0, TRUE));
+	// printf("1 = %s\n", convert_to_hexadecimal(1, TRUE));
+	// printf("525 = %s\n", convert_to_hexadecimal(525, TRUE));
+	// printf("10 = %s\n", convert_to_hexadecimal(10, TRUE));
+	// printf("18446744073709551615 = %s\n", convert_to_hexadecimal(test, TRUE));
 
-	printf("Для восьмеричной:\n");
-	printf("0 = %s\n", convert_to_base(0, 8));
-	printf("1 = %s\n", convert_to_base(1, 8));
-	printf("525 = %s\n", convert_to_base(525, 8));
-	printf("10 = %s\n", convert_to_base(10, 8));
-	printf("18446744073709551615 = %s\n", convert_to_base(test, 8));
+	// printf("Для восьмеричной:\n");
+	// printf("0 = %s\n", convert_to_base(0, 8));
+	// printf("1 = %s\n", convert_to_base(1, 8));
+	// printf("525 = %s\n", convert_to_base(525, 8));
+	// printf("10 = %s\n", convert_to_base(10, 8));
+	// printf("18446744073709551615 = %s\n", convert_to_base(test, 8));
 
-	printf("Для двоичной:\n");
-	printf("0 = %s\n", convert_to_base(0, 2));
-	printf("1 = %s\n", convert_to_base(1, 2));
-	printf("525 = %s\n", convert_to_base(525, 2));
-	printf("10 = %s\n", convert_to_base(10, 2));
-	printf("18446744073709551615 = %s\n", convert_to_base(test, 2));
+	// printf("Для двоичной:\n");
+	// printf("0 = %s\n", convert_to_base(0, 2));
+	// printf("1 = %s\n", convert_to_base(1, 2));
+	// printf("525 = %s\n", convert_to_base(525, 2));
+	// printf("10 = %s\n", convert_to_base(10, 2));
+	// printf("18446744073709551615 = %s\n", convert_to_base(test, 2));
 
-	printf("sizeofnumber 8:\n");
-	printf("0 = %d\n", size_of_number(0, 8));
-	printf("1 = %d\n", size_of_number(1, 8));
-	printf("525 = %d\n", size_of_number(525, 8));
-	printf("10 = %d\n", size_of_number(10, 8));
-	printf("18446744073709551615 = %d\n", size_of_number(test, 8));
+	// printf("sizeofnumber 8:\n");
+	// printf("0 = %d\n", size_of_number(0, 8));
+	// printf("1 = %d\n", size_of_number(1, 8));
+	// printf("525 = %d\n", size_of_number(525, 8));
+	// printf("10 = %d\n", size_of_number(10, 8));
+	// printf("18446744073709551615 = %d\n", size_of_number(test, 8));
 
-	printf("sizeofnumber 2:\n");
-	printf("0 = %d\n", size_of_number(0, 2));
-	printf("1 = %d\n", size_of_number(1, 2));
-	printf("525 = %d\n", size_of_number(525, 2));
-	printf("10 = %d\n", size_of_number(10, 2));
-	printf("18446744073709551615 = %d\n", size_of_number(test, 2));
+	// printf("sizeofnumber 2:\n");
+	// printf("0 = %d\n", size_of_number(0, 2));
+	// printf("1 = %d\n", size_of_number(1, 2));
+	// printf("525 = %d\n", size_of_number(525, 2));
+	// printf("10 = %d\n", size_of_number(10, 2));
+	// printf("18446744073709551615 = %d\n", size_of_number(test, 2));
 
-	printf("sizeofnumber 16:\n");
-	printf("0 = %d\n", size_of_number(0, 16));
-	printf("1 = %d\n", size_of_number(1, 16));
-	printf("525 = %d\n", size_of_number(525, 16));
-	printf("10 = %d\n", size_of_number(10, 16));
-	printf("18446744073709551615 = %d\n", size_of_number(test, 16));
+	// printf("sizeofnumber 16:\n");
+	// printf("0 = %d\n", size_of_number(0, 16));
+	// printf("1 = %d\n", size_of_number(1, 16));
+	// printf("525 = %d\n", size_of_number(525, 16));
+	// printf("10 = %d\n", size_of_number(10, 16));
+	// printf("18446744073709551615 = %d\n", size_of_number(test, 16));
+	// printf("%f\n", 3.4E+38);
+	// printf("%f\n", 3.4E+40);
+	// printf("%lf\n", 3.4E+38 + 2123.5);
+	// printf("%hhx %hX", 123, 123);
+
+	char *ptr = "Hello, world!";
+	ft_printf("Hello, world! = %-23pEND\n", ptr);
+	printf("Hello, world! = %p\n", ptr);
+	int *ptr2 = (int*)malloc(sizeof(int));
+	*ptr2 = 252;
+	ft_printf("252 = %p\n", ptr2);
+	printf("252 = %-23pEND\n", ptr2);
+
 	return (0);
 }

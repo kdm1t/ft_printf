@@ -101,6 +101,6 @@ void	display_s(t_format *formater);
 void	display_p(t_format *formater);
 int		size_of_number(unsigned long long int number, unsigned int base);
 char	*convert_to_base(unsigned long long int number, unsigned int base);
-char		*convert_to_hexadecimal(unsigned long long int number, int isUpperCase);
+char	*convert_to_hexadecimal(unsigned long long int number, int isUpperCase);
 
 #endif

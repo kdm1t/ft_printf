@@ -12,7 +12,8 @@ SRCS = \
 	$(SRCS_FOLDER)display_c.c \
 	$(SRCS_FOLDER)display_s.c \
 	$(SRCS_FOLDER)display_p.c \
-	$(SRCS_FOLDER)converter.c
+	$(SRCS_FOLDER)converter.c \
+	$(SRCS_FOLDER)display_u.c
 
 OBJS = \
 	main.o \
@@ -27,7 +28,8 @@ OBJS = \
 	display_c.o \
 	display_s.o \
 	display_p.o \
-	converter.o 
+	converter.o \
+	display_u.o
 
 SRCS_FOLDER=./src/
 INCLUDES = ./includes/

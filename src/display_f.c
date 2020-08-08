@@ -27,5 +27,3 @@ void	display_f(t_format *formater)
 	else
 		display_Lf(formater, va_arg(formater->argc, float));
 }
-
-char	*

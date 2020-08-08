@@ -2,6 +2,8 @@
 #include <stdint.h>
 #include <values.h>
 
+# define NORMUINT_MAX 4294967295
+
 int main(void) {
 	//ptr = &(*str);
 	// long long int test = 9223372036854775807;
@@ -77,7 +79,9 @@ int main(void) {
 	//int *ptr2 = (int*)malloc(sizeof(int));
 	//*ptr2 = 252;
 	//ft_printf("252 = %-3pEND\n", ptr2);
-	printf("%.100f\n", 124.45);
+	//unsigned int ui = 4294967295;
 
+	ft_printf("%.5uend\n", 12445);
+	printf("%.5uend\n", 12445);
 	return (0);
 }

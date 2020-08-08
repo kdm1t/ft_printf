@@ -102,5 +102,7 @@ void	display_p(t_format *formater);
 int		size_of_number(unsigned long long int number, unsigned int base);
 char	*convert_to_base(unsigned long long int number, unsigned int base);
 char	*convert_to_hexadecimal(unsigned long long int number, int isUpperCase);
+void	display_u(t_format *formater);
+int		length_of_number_ui(unsigned int num);
 
 #endif
